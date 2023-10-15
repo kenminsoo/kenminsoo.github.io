@@ -41,3 +41,11 @@
 		transform: none !important;
 		opacity: 1 !important;
 	}
+
+/* align test */
+.aligned-image {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;  /* Aligns the image vertically with the adjacent text */
+    margin-right: 10px;      /* Optional: Adds some space between the image and the text */
+}

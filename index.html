@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Hyperspace by HTML5 UP</title>
+		<title>Ken Nakatsu Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -19,10 +19,10 @@
 				<div class="inner">
 					<nav>
 						<ul>
+							<!--Here we mark it with the name to travel there-->
 							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">Who we are</a></li>
-							<li><a href="#two">What we do</a></li>
-							<li><a href="#three">Get in touch</a></li>
+							<li><a href="#one">Projects</a></li>
+							<li><a href="#two">Mathematical Applications</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -34,9 +34,10 @@
 				<!-- Intro -->
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
 						<div class="inner">
-							<h1>Hyperspace</h1>
-							<p>Just another fine responsive site template designed by <a href="http://html5up.net">HTML5 UP</a><br />
-							and released for free under the <a href="http://html5up.net/license">Creative Commons</a>.</p>
+							<h1>Ken Nakatsu's Portfolio</h1>
+							<p>Applied Mathematics and Statistics Emory University Undergraduate with interest in data science, 
+								mathematical statistics, and actuarial science. 
+								 Extensive applications of data science concepts to cancer biology research with the John A. Burns School of Medicine at the University of Hawaii Manoa.</p>
 							<ul class="actions">
 								<li><a href="#one" class="button scrolly">Learn more</a></li>
 							</ul>
@@ -46,37 +47,57 @@
 				<!-- One -->
 					<section id="one" class="wrapper style2 spotlights">
 						<section>
-							<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
+							<a href="#" class="image"><img src="images/srnafrag_intro.png" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Sed ipsum dolor</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+									<h2>sRNAfrag - Analyzing Small RNA Fragmentation with a Graph Theory Approach</h2>
+									<p>In this project, I utilized graph theory in a pythonic implementation to cluster fragments from sequencing data. Coupled with over 50 functions to 
+										process and analyze sequencing data realted to this method, the project serves as an avenue to 
+										increase our understanding of small RNA fragmentation which has been shown to be relevant to disease.</p>
 									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
+										<li><a href="sRNAfrag.html" class="button">Learn more</a></li>
 									</ul>
 								</div>
 							</div>
 						</section>
 						<section>
-							<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
+							<a href="#" class="image"><img src="images/lc_intro.png" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Feugiat consequat</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+									<h2>Improving Random Forest Lung Cancer Diagnostic Model Performance in Minority Populations</h2>
+									<p>In this bioinformatics project, I analyzed 215 lung cancer small RNA sequencing samples using DESeq2 and implemented a Random Forest 
+										model to classify health states, 
+										achieving strong performance metrics across diverse populations. 
+										Given the importance of equitable diagnostic models, I discovered that implementing another set of features improved the diagnostic model for minority populations.
+									</p>
 									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
+										<li><a href="LC_proj.html" class="button">Learn more</a></li>
 									</ul>
 								</div>
 							</div>
 						</section>
 						<section>
-							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
+							<a href="#" class="image"><img src="images/predictdisease.png" alt="" data-position="10% 10%" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Ultricies aliquam</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+									<h2>Predictive Modeling of Disease on the Population and Individual Level</h2>
+									<p>
+										For the Emory Data Science Club, I created a model to predict breast cancer incidence based on small RNA sequencing data utlizing random forest models. With the University of Hawaii Data Science Institute, I created a project predicting disease incidence with support vector machines, multi-varaible regression, and regression trees based on weather variable. 
+									</p>
 									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
+										<li><a href="pred_modeling.html" class="button">Learn more</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="images/llm.png" alt="" data-position="top center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Locally Hosted Large Language Model Tutors for Self-Learners</h2>
+									<p>This project utilizes a LLAMA 13b parameter model and a vectorized database to provide more informed responses to users seeking to learn on their own with textbooks. I would love to extend its utility to underserved high schools.</p>
+									<ul class="actions">
+										<li><a href="llm.html" class="button">Learn more</a></li>
 									</ul>
 								</div>
 							</div>
@@ -86,13 +107,18 @@
 				<!-- Two -->
 					<section id="two" class="wrapper style3 fade-up">
 						<div class="inner">
-							<h2>What we do</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+							<h2>Mathematical Applications</h2>
+							<p>With every math course I take, I seek to make one application or visual for at least one topic in the course.
+								Here, I demonstrate my ability to apply seemingly arbitrary topics or explain the concept through fun visuals.
+							</p>
 							<div class="features">
 								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Lorem ipsum amet</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+									<span class="icon solid major fa-desktop"></span>
+									<h3>Multi-Variable Calculus</h3>
+									<p>Depicts the drawing of parametric graphs, parametric derivatives, partial derivatives, contour or level curves, and the tangent plane.</p>
+									<ul class="actions">
+										<li><a href="MultiVariableCalculus.html" class="button">Learn more</a></li>
+									</ul>
 								</section>
 								<section>
 									<span class="icon solid major fa-lock"></span>
@@ -120,71 +146,8 @@
 									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
 								</section>
 							</div>
-							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn more</a></li>
-							</ul>
 						</div>
 					</section>
-
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Get in touch</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
-							<div class="split style1">
-								<section>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
-								</section>
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Address</h3>
-											<span>12345 Somewhere Road #654<br />
-											Nashville, TN 00000-0000<br />
-											USA</span>
-										</li>
-										<li>
-											<h3>Email</h3>
-											<a href="#">user@untitled.tld</a>
-										</li>
-										<li>
-											<h3>Phone</h3>
-											<span>(000) 000-0000</span>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-												<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-												<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-												<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
-
 			</div>
 
 		<!-- Footer -->

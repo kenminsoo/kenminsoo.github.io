@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Diversity in Diagnostics</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Projects</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="sRNAfrag.html" >sRNAfrag</a></li>
+						<li><a href="LC_proj.html" class="active">Diversity in Diagnostics</a></li>
+						<li><a href="pred_modeling.html">Predictive Modeling</a></li>
+						<li><a href="llm.html" class="">LLM for Learning</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Diversity in Lung Cancer Diagnostic Models</h1>
+							<h2>Graphical Overview</h2>
+							<span class="image fit"><img src="images/ML_LC.png" alt="" /></span>
+							<h2>Introduction & Importance</h2>
+							<p>
+								In the realm of small RNA liquid biopsy for cancer diagnostics, which is where the data was sourced from, ensuring equitable model performance across diverse populations is paramount. Unequal diagnostic accuracy can exacerbate existing health disparities, making it crucial to design models that provide consistent, reliable results for every individual, irrespective of their ethnic or racial background.
+							</p>
+							<p>
+								Here, I used two experiments with random forest models to explore (1) how the discovery of potential biomarkers is impacted by the experimental sampling design and (2) how the presence of microRNA isoforms [an addition variable that can be obtained from sequencing data], shown to be specific to race, can improve diagnostic models when these features are appended during the training process.
+							</p>
+							<p>
+								Code is not released as this is currently a project in progress. 
+							</p>
+							<h2>Sampling in the Discovery Process</h2>
+							<p>
+								<span class="image fit"><img src="images/RF_results.jpeg" alt="" /></span>
+								To ensure realistic sampling, I leveraged data from the Quantitative Health Science at the John A. Burns School of Medicine shiny app and Wikipedia to understand ethnic distributions in both regions. This guided the proportions of Native Hawaiians, Japanese, and Whites in my distinct sample groups—the mainland US group and the Hawaii group. I applied a random forest model to detect differences between datasets, specifically looking at differential gene expression (DEGs) in the "whites" and "diverse" populations. The model exhibited robust performance (>0.8 across most metrics). Interestingly, there was no notable performance boost when DEGs from diverse populations were analyzed. I hypothesize that this could stem from the inherent challenge of just distinguishing between cancerous and healthy samples.
+							</p>
+							<h2>Incorporating Presence of MicroRNA Isoforms</h2>
+							<span class="image fit"><img src="images/RF_results_Iso.png" alt="" /></span>
+							<p>
+								We made our prediction tool smarter by adding isoMiR data, which is like giving it more clues to work with. For Native Hawaiians, this made our predictions more accurate. However, for American Japanese, it was a bit less effective. With these extra clues, which added about 100 more pieces of information, our model performed remarkably well. This highlights how we should consider other variables besides abundance when designing diagnostic models as they may provide benefits (and sometimes consequences) to certain population groups.
+							</p>
+							<h2>Utilizing Branch Purity for Feature Importance</h2>
+							<span class="image fit"><img src="images/important_feat.jpeg" alt="" /></span>
+							<p>
+								Our analysis showed that small RNA data provided more consistent results than when using all RNA data for distinguishing between healthy and cancerous samples based on exosomes. The presence of tRNA fragments in the data was particularly intriguing, as they consistently differentiated between the two sample types. This suggests a potential role for tRNA fragmentation in exosome composition. To assess the significance of these findings, I utilized branch impurity as a measure for variable importance.
+							</p>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
